@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctorbot</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1 style="color: #4CAF50;">Doctorbot</h1>
+    <div id="chat-container">
+        <div id="chat-messages">
+            <div class="bot-message">Bot: Welcome! How can I assist you today?</div>
+        </div>
+        <!-- Updated: added a form element -->
+        <form id="message-form">
+            <div id="user-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button type="button" id="send-button" onclick="sendMessage()">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Updated: added event listener for form submission
+        document.getElementById('message-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // prevent the default form submission
+            sendMessage(); // call your sendMessage function
+        });
+
+        function sendMessage() {
+            var messageInput = document.getElementById('message-input');
+            var message = messageInput.value.trim();
+            
+            if (message !== '') {
+                // Display user message
+                var chatMessages = document.getElementById('chat-messages');
+                var userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'user-message';
+                userMessageDiv.textContent = message;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Send message to server
+                fetch('/get_response', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'message=' + encodeURIComponent(message),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display bot response
+                    var botMessageDiv = document.createElement('div');
+                    botMessageDiv.className = 'bot-message';
+                    botMessageDiv.innerHTML = '<strong>Bot:</strong> ' + data.response;
+                    chatMessages.appendChild(botMessageDiv);
+
+                    // Scroll to the bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+    </script>
+</body>
+</html>

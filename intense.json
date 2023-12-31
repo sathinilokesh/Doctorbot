@@ -1,0 +1,514 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": ["Hello!", "Hey!", "What's your age?", "How old are you?", "how are you?", "hello", "hi", "what's up?", "whats up", "good morning", "good evening"],
+            "responses": ["hello", "hi", "what's up?", "whats up", "good morning", "good evening Human!"]
+        },
+        {
+            "tag": "Flu",
+            "patterns": ["sudden fever", "dry cough", "chesty cough", "chills", "aching muscles", "sore throat"],
+            "responses": ["According to your symptoms, you might have Flu", "You have Flu", "I suppose you have Flu"]
+        },
+        {
+            "tag": "Cold",
+            "patterns": ["runny nose", "sneezing", "congestion", "headache", "sore throat", "mild fever"],
+            "responses": ["Your symptoms suggest a common cold", "It seems like you have a cold", "You might be dealing with a cold"]
+        },
+        {
+            "tag": "Fever",
+            "patterns": ["c", "chills", "sweating", "headache", "body aches"],
+            "responses": ["Your symptoms indicate a fever. It's essential to consult a healthcare professional.", "You might be experiencing a fever. Please consult a doctor."]
+        },
+        {
+            "tag": "Headache",
+            "patterns": ["throbbing pain", "pressure in the head", "sensitivity to light", "nausea", "tension headache"],
+            "responses": ["Based on your symptoms, you may have a headache. Make sure to get enough rest.", "It looks like you are experiencing a headache. Consider taking a break and relaxing."]
+        },
+        {
+            "tag": "COVID-19",
+            "patterns": ["shortness of breath", "loss of taste or smell", "persistent cough", "fever", "fatigue"],
+            "responses": ["Your symptoms align with possible COVID-19. It's crucial to get tested and follow health guidelines.", "Considering your symptoms, it's advisable to consult a healthcare professional for COVID-19 evaluation."]
+        },
+        {
+            "tag": "Allergies",
+            "patterns": ["itchy eyes", "runny nose", "sneezing", "skin rash", "shortness of breath"],
+            "responses": ["Your symptoms are consistent with allergies. Identifying and avoiding triggers can help manage your condition.", "It seems like you may be experiencing allergic reactions. Consultation with an allergist could provide further insights."]
+        },
+        {
+            "tag": "Asthma",
+            "patterns": ["shortness of breath", "wheezing", "chest tightness", "coughing, especially at night or early morning"],
+            "responses": ["Your symptoms are indicative of asthma. It's important to see a doctor for proper diagnosis and management.", "Considering your symptoms, asthma might be a possibility. Consultation with a pulmonologist is recommended."]
+        },
+        {
+            "tag": "Diabetes",
+            "patterns": ["frequent urination", "excessive thirst", "unexplained weight loss", "fatigue", "blurred vision"],
+            "responses": ["Your symptoms may be associated with diabetes. Consult with a healthcare professional for a thorough evaluation.", "Considering your symptoms, it's advisable to get your blood sugar levels checked. Consultation with an endocrinologist is recommended."]
+        },
+        {
+            "tag": "Migraine",
+            "patterns": ["throbbing headache", "nausea", "vomiting", "sensitivity to light and sound"],
+            "responses": ["Your symptoms suggest a migraine. It's essential to manage stress and triggers. Consultation with a neurologist is recommended.", "It looks like you may be experiencing a migraine. Adequate rest and stress management are important."]
+        },
+        {
+            "tag": "Hypertension",
+            "patterns": ["persistent high blood pressure", "headaches", "vision problems", "fatigue", "chest pain"],
+            "responses": ["Your symptoms could be related to hypertension. Regular monitoring and lifestyle changes are crucial. Consult with a cardiologist for proper evaluation and guidance.", "Considering your symptoms, it's important to check your blood pressure regularly. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Anxiety",
+            "patterns": ["restlessness", "rapid heartbeat", "excessive worrying", "difficulty concentrating", "muscle tension"],
+            "responses": ["Your symptoms are consistent with anxiety. It's crucial to manage stress and consider talking to a mental health professional.", "It seems like you may be dealing with anxiety. Seeking support from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Depression",
+            "patterns": ["persistent sadness", "loss of interest in activities", "fatigue", "changes in sleep patterns", "feelings of worthlessness"],
+            "responses": ["Your symptoms may indicate depression. It's important to reach out to a mental health professional for support and guidance.", "Considering your symptoms, talking to a mental health professional about your feelings is recommended."]
+        },
+        {
+            "tag": "Insomnia",
+            "patterns": ["difficulty falling asleep", "waking up frequently during the night", "early morning awakening", "daytime fatigue"],
+            "responses": ["Your symptoms suggest insomnia. Establishing a healthy sleep routine and consulting with a sleep specialist can be helpful.", "It looks like you may be experiencing insomnia. Consider adopting sleep hygiene practices and consulting with a healthcare professional."]
+        },
+        {
+            "tag": "Irritable Bowel Syndrome (IBS)",
+            "patterns": ["abdominal pain or discomfort", "bloating", "changes in bowel habits", "diarrhea or constipation", "mucus in stool"],
+            "responses": ["Your symptoms are consistent with Irritable Bowel Syndrome (IBS). Consultation with a gastroenterologist is recommended for proper evaluation and management.", "It seems like you may be dealing with Irritable Bowel Syndrome. Discussing your symptoms with a healthcare professional can provide insights."]
+        },
+        {
+            "tag": "Urinary Tract Infection (UTI)",
+            "patterns": ["frequent urination", "burning sensation during urination", "cloudy or strong-smelling urine", "lower abdominal pain"],
+            "responses": ["Your symptoms may be indicative of a Urinary Tract Infection (UTI). It's crucial to seek medical attention and get appropriate treatment.", "Considering your symptoms, it's advisable to consult a healthcare professional for a UTI evaluation."]
+        },
+        {
+            "tag": "Thyroid Disorders",
+            "patterns": ["unexplained weight changes", "fatigue", "irritability", "hair loss", "sensitivity to cold or heat"],
+            "responses": ["Your symptoms may be related to thyroid disorders. Consultation with an endocrinologist is recommended for a thorough evaluation.", "Considering your symptoms, it's important to get your thyroid function checked. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Osteoarthritis",
+            "patterns": ["joint pain", "stiffness", "swelling", "decreased range of motion", "crepitus (grating sensation)"],
+            "responses": ["Your symptoms are indicative of osteoarthritis. Consultation with a rheumatologist can provide a proper diagnosis and management plan.", "It seems like you may be experiencing osteoarthritis. Discussing your symptoms with a healthcare professional is recommended."]
+        },
+        {
+            "tag": "Anemia",
+            "patterns": ["fatigue", "pale skin", "shortness of breath", "dizziness", "cold hands and feet"],
+            "responses": ["Your symptoms may be indicative of anemia. Consultation with a healthcare professional for blood tests and diagnosis is recommended.", "Considering your symptoms, it's important to check your hemoglobin levels. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Skin Infections",
+            "patterns": ["redness", "itching", "rashes", "blisters", "swelling"],
+            "responses": ["Your symptoms suggest a possible skin infection. Consultation with a dermatologist for a proper diagnosis and treatment plan is recommended.", "It looks like you may have a skin infection. Seeking advice from a dermatologist is advised."]
+        },
+        {
+            "tag": "Sleep Apnea",
+            "patterns": ["loud snoring", "pauses in breathing during sleep", "excessive daytime sleepiness", "morning headache", "difficulty staying asleep"],
+            "responses": ["Your symptoms suggest sleep apnea. Consultation with a sleep specialist for a sleep study is recommended.", "It looks like you may be experiencing sleep apnea. Seeking evaluation from a sleep specialist is advised."]
+        },
+        {
+            "tag": "Gastroesophageal Reflux Disease (GERD)",
+            "patterns": ["heartburn", "acid regurgitation", "chest pain", "difficulty swallowing", "chronic cough"],
+            "responses": ["Your symptoms are indicative of GERD. Consultation with a gastroenterologist for proper diagnosis and management is recommended.", "Considering your symptoms, it's advisable to consult a healthcare professional for evaluation of GERD."]
+        },
+        {
+            "tag": "Chronic Obstructive Pulmonary Disease (COPD)",
+            "patterns": ["shortness of breath", "chronic cough", "wheezing", "tightness in the chest", "frequent respiratory infections"],
+            "responses": ["Your symptoms suggest COPD. Consultation with a pulmonologist for lung function tests and management is crucial.", "It looks like you may be dealing with COPD. Seeking advice from a pulmonologist is recommended."]
+        },
+        {
+            "tag": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+            "patterns": ["inattention", "hyperactivity", "impulsivity", "difficulty focusing", "forgetfulness"],
+            "responses": ["Your symptoms align with ADHD. Consultation with a mental health professional for a comprehensive assessment is recommended.", "It seems like you may be dealing with ADHD. Seeking support from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Celiac Disease",
+            "patterns": ["abdominal pain", "bloating", "diarrhea", "constipation", "fatigue after eating gluten"],
+            "responses": ["Your symptoms may be indicative of Celiac Disease. Consultation with a gastroenterologist and gluten-free diet management is recommended.", "Considering your symptoms, it's advisable to explore the possibility of Celiac Disease with a healthcare professional."]
+        },
+        {
+            "tag": "Ovarian Cysts",
+            "patterns": ["pelvic pain", "bloating", "changes in bowel habits", "frequent urination", "pain during intercourse"],
+            "responses": ["Your symptoms suggest the possibility of ovarian cysts. Consultation with a gynecologist for imaging and evaluation is recommended.", "It looks like you may have ovarian cysts. Seeking advice from a gynecologist is advised."]
+        },
+        {
+            "tag": "Menopause",
+            "patterns": ["irregular periods", "hot flashes", "night sweats", "mood swings", "vaginal dryness"],
+            "responses": ["Your symptoms may indicate the onset of menopause. Consultation with a gynecologist for management and support is recommended.", "Considering your symptoms, it's advisable to discuss the possibility of menopause with a healthcare professional."]
+        },
+        {
+            "tag": "Hepatitis",
+            "patterns": ["jaundice (yellowing of the skin and eyes)", "fatigue", "abdominal pain", "nausea", "dark urine"],
+            "responses": ["Your symptoms may be indicative of hepatitis. Consultation with a hepatologist for blood tests and evaluation is crucial.", "Considering your symptoms, it's advisable to consult a healthcare professional for hepatitis evaluation."]
+        },
+        {
+            "tag": "Mental Stress",
+            "patterns": ["constant worry", "difficulty concentrating", "irritability", "muscle tension", "changes in sleep patterns"],
+            "responses": ["Your symptoms suggest mental stress. Seeking support from a mental health professional for coping strategies is recommended.", "It looks like you may be dealing with mental stress. Talking to a mental health professional about your concerns could be helpful."]
+        },
+        {
+            "tag": "Iron Deficiency Anemia",
+            "patterns": ["fatigue", "pale skin", "weakness", "shortness of breath", "cold hands and feet"],
+            "responses": ["Your symptoms may be indicative of iron deficiency anemia. Consultation with a healthcare professional for blood tests and treatment is recommended.", "Considering your symptoms, it's important to check your iron levels. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Gout",
+            "patterns": ["sudden, severe joint pain", "swelling", "redness", "limited range of motion", "tenderness"],
+            "responses": ["Your symptoms suggest the possibility of gout. Consultation with a rheumatologist for diagnosis and management is recommended.", "It looks like you may be experiencing symptoms of gout. Seeking advice from a rheumatologist is advised."]
+        },
+        {
+            "tag": "Social Anxiety",
+            "patterns": ["fear of social situations", "intense self-consciousness", "avoidance of social activities", "physical symptoms in social situations", "panic attacks"],
+            "responses": ["Your symptoms align with social anxiety. Consultation with a mental health professional for support and coping strategies is recommended.", "It seems like you may be dealing with social anxiety. Seeking guidance from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Eating Disorders",
+            "patterns": ["changes in eating habits", "obsession with food, body weight, or shape", "purging behaviors", "extreme weight loss or gain", "low self-esteem"],
+            "responses": ["Your symptoms may indicate the presence of an eating disorder. Consultation with a mental health professional experienced in eating disorders is crucial.", "Considering your symptoms, it's advisable to discuss your concerns with a mental health professional specializing in eating disorders."]
+        },
+        {
+            "tag": "Chronic Fatigue Syndrome",
+            "patterns": ["persistent fatigue", "unrefreshing sleep", "muscle and joint pain", "headaches", "difficulty concentrating"],
+            "responses": ["Your symptoms suggest the possibility of Chronic Fatigue Syndrome. Consultation with a healthcare professional for a thorough evaluation is recommended.", "It looks like you may be dealing with Chronic Fatigue Syndrome. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Psoriasis",
+            "patterns": ["red, inflamed skin", "silvery scales", "itching or burning", "thickened or pitted nails", "joint pain"],
+            "responses": ["Your symptoms may be indicative of psoriasis. Consultation with a dermatologist for diagnosis and management is recommended.", "Considering your symptoms, it's advisable to consult a dermatologist for evaluation and treatment of psoriasis."]
+        },
+        {
+            "tag": "Carpal Tunnel Syndrome",
+            "patterns": ["hand numbness or tingling", "weakness in the hand", "pain that radiates up the arm", "hand clumsiness", "wrist pain"],
+            "responses": ["Your symptoms suggest the possibility of Carpal Tunnel Syndrome. Consultation with a hand specialist for diagnosis and treatment is recommended.", "It looks like you may be experiencing symptoms of Carpal Tunnel Syndrome. Seeking advice from a hand specialist is advised."]
+        },
+        {
+            "tag": "Glaucoma",
+            "patterns": ["gradual loss of peripheral vision", "blurred vision", "halos around lights", "eye pain or redness", "nausea or vomiting"],
+            "responses": ["Your symptoms may be indicative of glaucoma. Consultation with an ophthalmologist for eye exams and diagnosis is crucial.", "Considering your symptoms, it's important to check for glaucoma with an ophthalmologist. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Cancer Warning Signs",
+            "patterns": ["unexplained weight loss", "persistent fatigue", "changes in bowel or bladder habits", "persistent cough or hoarseness", "unexplained pain"],
+            "responses": ["Your symptoms raise concerns about potential cancer. Immediate consultation with an oncologist for further evaluation and testing is crucial.", "Considering your symptoms, it's important to rule out cancer. Urgent consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Sciatica",
+            "patterns": ["pain in the lower back or buttocks", "pain that radiates down the leg", "tingling or numbness", "weakness in the affected leg", "worsened pain when sitting"],
+            "responses": ["Your symptoms suggest the possibility of sciatica. Consultation with a healthcare professional for a proper diagnosis and treatment plan is recommended.", "It looks like you may be experiencing symptoms of sciatica. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Dehydration",
+            "patterns": ["excessive thirst", "dark yellow urine", "dry mouth", "fatigue", "dizziness"],
+            "responses": ["Your symptoms suggest dehydration. Make sure to increase fluid intake and seek medical attention if symptoms persist.", "It looks like you may be dehydrated. Try drinking more water and consult a healthcare professional if symptoms persist."]
+        },
+        {
+            "tag": "Tennis Elbow",
+            "patterns": ["pain on the outer part of the elbow", "weak grip strength", "worsened pain when gripping or lifting", "stiffness in the elbow", "pain that worsens with forearm activity"],
+            "responses": ["Your symptoms suggest tennis elbow. Resting the affected arm and consulting with a healthcare professional for proper treatment is recommended.", "It looks like you may have tennis elbow. Avoiding repetitive activities and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Plantar Fasciitis",
+            "patterns": ["heel pain", "pain in the arch of the foot", "increased pain in the morning", "pain that worsens with prolonged standing or walking", "stiffness in the foot"],
+            "responses": ["Your symptoms suggest plantar fasciitis. Resting the foot, proper footwear, and consulting with a healthcare professional for treatment is recommended.", "It looks like you may be experiencing plantar fasciitis. Avoiding excessive strain on the foot and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Herniated Disc",
+            "patterns": ["back pain that radiates down the leg", "numbness or tingling in the leg or foot", "worsened pain with certain movements", "muscle weakness", "difficulty standing or walking"],
+            "responses": ["Your symptoms suggest a herniated disc. Consultation with a healthcare professional, possibly a spine specialist, for imaging and treatment is recommended.", "It looks like you may have a herniated disc. Avoiding strenuous activities and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Seasonal Affective Disorder (SAD)",
+            "patterns": ["depressed mood during specific seasons", "low energy", "changes in sleep patterns", "weight gain", "difficulty concentrating"],
+            "responses": ["Your symptoms align with Seasonal Affective Disorder (SAD). Consultation with a mental health professional for support and coping strategies is recommended.", "It seems like you may be experiencing Seasonal Affective Disorder. Seeking advice from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Rotator Cuff Injury",
+            "patterns": ["shoulder pain", "weakness in the arm", "difficulty lifting the arm", "clicking or popping sounds in the shoulder", "pain that worsens at night"],
+            "responses": ["Your symptoms suggest a possible rotator cuff injury. Resting the shoulder and consulting with a healthcare professional for proper diagnosis and treatment is recommended.", "It looks like you may have a rotator cuff injury. Avoiding activities that strain the shoulder and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Shin Splints",
+            "patterns": ["pain along the inner edge of the shin", "tenderness or soreness in the lower leg", "pain that worsens with activity", "swelling in the lower leg", "pain that lessens with rest"],
+            "responses": ["Your symptoms suggest shin splints. Resting the affected leg, proper footwear, and consulting with a healthcare professional for treatment is recommended.", "It looks like you may be experiencing shin splints. Avoiding high-impact activities and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Chronic Kidney Disease",
+            "patterns": ["fatigue", "swelling in the ankles or legs", "shortness of breath", "frequent urination", "blood in the urine"],
+            "responses": ["Your symptoms may be indicative of chronic kidney disease. Consultation with a nephrologist for kidney function tests and evaluation is crucial.", "Considering your symptoms, it's important to check for chronic kidney disease. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Panic Attacks",
+            "patterns": ["sudden onset of intense fear", "rapid heartbeat", "shortness of breath", "chest pain", "feeling of impending doom"],
+            "responses": ["Your symptoms suggest panic attacks. Consultation with a mental health professional for coping strategies and support is recommended.", "It looks like you may be experiencing panic attacks. Seeking advice from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Tinnitus",
+            "patterns": ["ringing, buzzing, or hissing sounds in the ears", "worsened in quiet environments", "difficulty concentrating", "hearing loss", "headache"],
+            "responses": ["Your symptoms suggest tinnitus. Consultation with an audiologist or ear, nose, and throat (ENT) specialist for evaluation is recommended.", "It looks like you may have tinnitus. Seeking advice from an audiologist or ENT specialist is advised."]
+        },
+        {
+            "tag": "Achilles Tendinitis",
+            "patterns": ["pain in the back of the heel or calf", "stiffness in the morning", "swelling along the Achilles tendon", "pain that worsens with activity", "difficulty walking or standing on tiptoe"],
+            "responses": ["Your symptoms suggest Achilles tendinitis. Resting the affected leg, ice application, and consulting with a healthcare professional for treatment is recommended.", "It looks like you may be experiencing Achilles tendinitis. Avoiding excessive strain on the tendon and seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Gastrointestinal Bleeding",
+            "patterns": ["bloody or tarry stools", "vomiting blood", "abdominal pain", "fatigue", "weakness"],
+            "responses": ["Your symptoms may indicate gastrointestinal bleeding. Urgent consultation with a gastroenterologist for diagnosis and treatment is crucial.", "Considering your symptoms, it's important to seek immediate medical attention for possible gastrointestinal bleeding. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Multiple Sclerosis (MS)",
+            "patterns": ["fatigue", "difficulty walking", "numbness or tingling", "muscle weakness", "problems with coordination and balance"],
+            "responses": ["Your symptoms suggest the possibility of multiple sclerosis. Consultation with a neurologist for neurological exams and imaging is recommended.", "It looks like you may be dealing with multiple sclerosis. Seeking advice from a neurologist is advised."]
+        },
+        {
+            "tag": "Gingivitis",
+            "patterns": ["red, swollen gums", "bleeding gums while brushing or flossing", "bad breath", "receding gums", "tender gums"],
+            "responses": ["Your symptoms suggest gingivitis. Proper oral hygiene practices and consultation with a dentist for cleaning and care is recommended.", "It looks like you may have gingivitis. Regular dental check-ups and proper oral care are advised."]
+        },
+        {
+            "tag": "Chlamydia",
+            "patterns": ["painful urination", "unusual discharge", "abdominal pain", "rectal pain or discharge", "pain during sexual intercourse"],
+            "responses": ["Your symptoms may be indicative of chlamydia. Consultation with a healthcare professional for testing and treatment is crucial.", "Considering your symptoms, it's important to test for chlamydia. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Chronic Sinusitis",
+            "patterns": ["congestion", "facial pain or pressure", "headache", "loss of smell", "thick yellow or green nasal discharge"],
+            "responses": ["Your symptoms suggest chronic sinusitis. Consultation with an ear, nose, and throat (ENT) specialist for proper diagnosis and management is recommended.", "It looks like you may have chronic sinusitis. Seeking advice from an ENT specialist is advised."]
+        },
+        {
+            "tag": "Vitamin D Deficiency",
+            "patterns": ["fatigue", "bone pain or tenderness", "muscle weakness", "frequent illnesses or infections", "depression"],
+            "responses": ["Your symptoms may be indicative of vitamin D deficiency. Consultation with a healthcare professional for blood tests and supplementation is recommended.", "Considering your symptoms, it's important to check for vitamin D deficiency. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Cirrhosis",
+            "patterns": ["fatigue", "swelling in the abdomen", "yellowing of the skin and eyes", "easy bruising", "confusion or forgetfulness"],
+            "responses": ["Your symptoms may indicate cirrhosis. Urgent consultation with a hepatologist for liver function tests and evaluation is crucial.", "Considering your symptoms, it's important to check for cirrhosis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Tension-Type Headache",
+            "patterns": ["mild to moderate headache", "band-like pressure around the head", "sensitivity to light or sound", "neck pain", "gradual onset of pain"],
+            "responses": ["Based on your symptoms, you may have tension-type headaches. Ensuring adequate rest and managing stress can be helpful.", "It looks like you are experiencing tension-type headaches. Consider relaxation techniques and consult a healthcare professional if needed."]
+        },
+        {
+            "tag": "Vertigo",
+            "patterns": ["dizziness", "spinning sensation", "loss of balance", "nausea", "ringing in the ears"],
+            "responses": ["Your symptoms suggest vertigo. Consultation with an ear, nose, and throat (ENT) specialist for evaluation is recommended.", "It looks like you may be experiencing vertigo. Seeking advice from an ENT specialist is advised."]
+        },
+        {
+            "tag": "Gallstones",
+            "patterns": ["upper abdominal pain", "pain after eating fatty foods", "nausea", "vomiting", "yellowing of the skin and eyes"],
+            "responses": ["Your symptoms may be indicative of gallstones. Consultation with a gastroenterologist for imaging and evaluation is crucial.", "Considering your symptoms, it's important to check for gallstones. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Gluten Sensitivity",
+            "patterns": ["bloating", "abdominal pain", "diarrhea or constipation", "fatigue", "headaches"],
+            "responses": ["Your symptoms may be indicative of gluten sensitivity. Consultation with a healthcare professional and dietary adjustments may be helpful.", "Considering your symptoms, it's advisable to explore the possibility of gluten sensitivity with a healthcare professional."]
+        },
+        {
+            "tag": "Restless Legs Syndrome (RLS)",
+            "patterns": ["urge to move legs", "uncomfortable sensations in the legs", "worsened symptoms at rest", "relief with movement", "disruption of sleep"],
+            "responses": ["Your symptoms suggest Restless Legs Syndrome. Consultation with a healthcare professional for evaluation and management is recommended.", "It looks like you may be dealing with Restless Legs Syndrome. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Cystitis",
+            "patterns": ["frequent, painful urination", "urgency to urinate", "lower abdominal pain", "cloudy or strong-smelling urine", "blood in the urine"],
+            "responses": ["Your symptoms may be indicative of cystitis. Consultation with a healthcare professional for a urinary tract infection evaluation is crucial.", "Considering your symptoms, it's important to check for cystitis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Hypothyroidism",
+            "patterns": ["fatigue", "weight gain", "sensitivity to cold", "dry skin", "hair loss"],
+            "responses": ["Your symptoms may be associated with hypothyroidism. Consultation with an endocrinologist for thyroid function tests is recommended.", "Considering your symptoms, it's important to check thyroid function. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Fibromyalgia",
+            "patterns": ["widespread pain", "fatigue", "sleep disturbances", "joint stiffness", "cognitive difficulties (fibro fog)"],
+            "responses": ["Your symptoms suggest fibromyalgia. Consultation with a rheumatologist for diagnosis and management is recommended.", "It looks like you may be dealing with fibromyalgia. Seeking advice from a rheumatologist is advised."]
+        },
+        {
+            "tag": "Meningitis",
+            "patterns": ["severe headache", "stiff neck", "fever", "sensitivity to light", "nausea or vomiting"],
+            "responses": ["Your symptoms may be indicative of meningitis. Urgent consultation with a healthcare professional for evaluation is crucial.", "Considering your symptoms, it's important to rule out meningitis. Seek immediate medical attention."]
+        },
+        {
+            "tag": "Vitamin B12 Deficiency",
+            "patterns": ["fatigue", "weakness", "numbness or tingling", "difficulty walking", "memory loss"],
+            "responses": ["Your symptoms may be indicative of vitamin B12 deficiency. Consultation with a healthcare professional for blood tests and supplementation is recommended.", "Considering your symptoms, it's important to check for vitamin B12 deficiency. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Osteoporosis",
+            "patterns": ["loss of height over time", "back pain", "stooped posture", "fractures that occur easily", "weak and brittle nails"],
+            "responses": ["Your symptoms may be indicative of osteoporosis. Consultation with a healthcare professional for bone density tests and management is crucial.", "Considering your symptoms, it's important to check for osteoporosis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Bipolar Disorder",
+            "patterns": ["periods of high energy and impulsivity", "periods of low mood and energy", "difficulty sleeping", "rapid speech", "reckless behavior"],
+            "responses": ["Your symptoms align with bipolar disorder. Consultation with a mental health professional for a comprehensive assessment is recommended.", "It seems like you may be dealing with bipolar disorder. Seeking support from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Raynaud's Disease",
+            "patterns": ["cold fingers or toes", "color changes in the skin in response to cold or stress", "numbness or tingling", "pain or throbbing in affected areas", "ulcers on fingertips or toes"],
+            "responses": ["Your symptoms suggest Raynaud's disease. Consultation with a rheumatologist for diagnosis and management is recommended.", "It looks like you may have Raynaud's disease. Seeking advice from a rheumatologist is advised."]
+        },
+        {
+            "tag": "Polycystic Ovary Syndrome (PCOS)",
+            "patterns": ["irregular periods", "excess facial or body hair", "acne", "weight gain", "ovarian cysts"],
+            "responses": ["Your symptoms may be indicative of polycystic ovary syndrome. Consultation with a gynecologist for hormonal evaluation and management is crucial.", "Considering your symptoms, it's important to check for polycystic ovary syndrome. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Lupus",
+            "patterns": ["joint pain and swelling", "skin rashes", "fatigue", "fever", "sensitivity to light"],
+            "responses": ["Your symptoms may be indicative of lupus. Consultation with a rheumatologist for diagnostic tests and management is crucial.", "Considering your symptoms, it's important to check for lupus. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Interstitial Cystitis",
+            "patterns": ["persistent pelvic pain", "frequent urination", "urgency to urinate", "pain during sexual intercourse", "symptoms worsen with certain foods or drinks"],
+            "responses": ["Your symptoms suggest interstitial cystitis. Consultation with a urologist for evaluation and management is recommended.", "It looks like you may have interstitial cystitis. Seeking advice from a urologist is advised."]
+        },
+        {
+            "tag": "Ovarian Cancer",
+            "patterns": ["abdominal bloating", "pelvic pain", "feeling full quickly", "changes in bowel habits", "unexplained weight loss"],
+            "responses": ["Your symptoms may be indicative of ovarian cancer. Urgent consultation with a gynecologist for diagnostic tests is crucial.", "Considering your symptoms, it's important to rule out ovarian cancer. Seek immediate medical attention."]
+        },
+        {
+            "tag": "Pneumonia",
+            "patterns": ["cough with phlegm", "shortness of breath", "chest pain", "fever", "fatigue"],
+            "responses": ["Your symptoms may be indicative of pneumonia. Consultation with a healthcare professional for chest X-rays and treatment is crucial.", "Considering your symptoms, it's important to check for pneumonia. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Tonsillitis",
+            "patterns": ["sore throat", "difficulty swallowing", "fever", "enlarged tonsils", "white or yellow coating on the tonsils"],
+            "responses": ["Your symptoms suggest tonsillitis. Consultation with a healthcare professional for throat examination and treatment is recommended.", "It looks like you may have tonsillitis. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Urinary Incontinence",
+            "patterns": ["involuntary leakage of urine", "frequent urination", "urgency to urinate", "difficulty emptying the bladder", "stress incontinence"],
+            "responses": ["Your symptoms may be indicative of urinary incontinence. Consultation with a urologist for evaluation and management is crucial.", "Considering your symptoms, it's important to check for urinary incontinence. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Eczema",
+            "patterns": ["red or inflamed skin", "itching", "dry or scaly patches", "small, raised bumps", "oozing or crusting"],
+            "responses": ["Your symptoms may be indicative of eczema. Consultation with a dermatologist for proper diagnosis and management is recommended.", "Considering your symptoms, it's important to check for eczema. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Hypertension",
+            "patterns": ["headaches", "shortness of breath", "nosebleeds", "fatigue", "vision changes"],
+            "responses": ["Your symptoms may be indicative of hypertension. Consultation with a healthcare professional for blood pressure monitoring and management is crucial.", "Considering your symptoms, it's important to check for hypertension. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Rheumatoid Arthritis",
+            "patterns": ["joint pain", "morning stiffness", "swelling in joints", "fatigue", "decreased range of motion"],
+            "responses": ["Your symptoms may be indicative of rheumatoid arthritis. Consultation with a rheumatologist for diagnosis and management is crucial.", "Considering your symptoms, it's important to check for rheumatoid arthritis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Hemorrhoids",
+            "patterns": ["rectal bleeding", "itching or discomfort in the anal region", "pain during bowel movements", "swelling around the anus", "lump near the anus"],
+            "responses": ["Your symptoms suggest hemorrhoids. Consultation with a healthcare professional for evaluation and management is recommended.", "It looks like you may be dealing with hemorrhoids. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Alzheimer's Disease",
+            "patterns": ["memory loss", "confusion", "difficulty solving problems", "changes in mood or personality", "difficulty completing familiar tasks"],
+            "responses": ["Your symptoms may be indicative of Alzheimer's disease. Consultation with a neurologist for cognitive assessments and evaluation is crucial.", "Considering your symptoms, it's important to check for Alzheimer's disease. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Migraine",
+            "patterns": ["severe headache", "sensitivity to light and sound", "nausea", "visual disturbances", "throbbing pain on one side of the head"],
+            "responses": ["Your symptoms suggest a possible migraine. Consultation with a healthcare professional for proper diagnosis and management is recommended.", "It looks like you may be experiencing migraines. Seeking advice from a healthcare professional is advised."]
+        },
+        {
+            "tag": "Deep Vein Thrombosis (DVT)",
+            "patterns": ["swelling in one leg", "pain or tenderness in the calf", "red or discolored skin on the leg", "warmth over the affected area", "difficulty walking"],
+            "responses": ["Your symptoms may be indicative of deep vein thrombosis. Urgent consultation with a healthcare professional for imaging and treatment is crucial.", "Considering your symptoms, it's important to check for deep vein thrombosis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Binge Eating Disorder",
+            "patterns": ["eating large amounts of food in a short period", "loss of control over eating", "eating rapidly", "eating when not hungry", "feelings of guilt or shame after eating"],
+            "responses": ["Your symptoms may indicate binge eating disorder. Consultation with a mental health professional for assessment and support is recommended.", "Considering your symptoms, it's important to explore the possibility of binge eating disorder with a mental health professional."]
+        },
+        {
+            "tag": "Gastritis",
+            "patterns": ["burning or gnawing pain in the upper abdomen", "nausea", "vomiting", "loss of appetite", "bloating"],
+            "responses": ["Your symptoms may be indicative of gastritis. Consultation with a gastroenterologist for evaluation and management is crucial.", "Considering your symptoms, it's important to check for gastritis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Ankylosing Spondylitis",
+            "patterns": ["lower back pain and stiffness", "pain and stiffness in the neck", "fatigue", "difficulty expanding the chest while breathing", "joint pain and swelling"],
+            "responses": ["Your symptoms suggest ankylosing spondylitis. Consultation with a rheumatologist for diagnosis and management is recommended.", "It looks like you may be dealing with ankylosing spondylitis. Seeking advice from a rheumatologist is advised."]
+        },
+        {
+            "tag": "Gallbladder Disease",
+            "patterns": ["abdominal pain, particularly in the upper right side", "nausea", "vomiting", "bloating", "indigestion"],
+            "responses": ["Your symptoms may be indicative of gallbladder disease. Consultation with a gastroenterologist for imaging and evaluation is crucial.", "Considering your symptoms, it's important to check for gallbladder disease. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Obsessive-Compulsive Disorder (OCD)",
+            "patterns": ["persistent, unwanted thoughts", "ritualistic behaviors", "fear of contamination", "excessive checking", "intrusive thoughts"],
+            "responses": ["Your symptoms align with obsessive-compulsive disorder. Consultation with a mental health professional for a comprehensive assessment and support is recommended.", "It seems like you may be dealing with obsessive-compulsive disorder. Seeking support from a mental health professional could be beneficial."]
+        },
+        {
+            "tag": "Pancreatitis",
+            "patterns": ["severe abdominal pain", "nausea", "vomiting", "fever", "tenderness in the abdomen"],
+            "responses": ["Your symptoms may be indicative of pancreatitis. Urgent consultation with a healthcare professional for imaging and treatment is crucial.", "Considering your symptoms, it's important to check for pancreatitis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Fungal Infection",
+            "patterns": ["itching or burning", "redness or rash", "peeling or cracking skin", "discharge", "unpleasant odor"],
+            "responses": ["Your symptoms may be indicative of a fungal infection. Consultation with a healthcare professional for proper diagnosis and treatment is crucial.", "Considering your symptoms, it's important to check for a fungal infection. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Hypoglycemia",
+            "patterns": ["shakiness", "sweating", "irritability", "confusion", "rapid heartbeat"],
+            "responses": ["Your symptoms may be indicative of hypoglycemia. Consultation with a healthcare professional for blood sugar monitoring and evaluation is crucial.", "Considering your symptoms, it's important to check for hypoglycemia. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Celiac Disease",
+            "patterns": ["digestive issues", "weight loss", "fatigue", "joint pain", "skin rash"],
+            "responses": ["Your symptoms may be indicative of celiac disease. Consultation with a healthcare professional for blood tests and evaluation is crucial.", "Considering your symptoms, it's important to check for celiac disease. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Sleep Apnea",
+            "patterns": ["loud snoring", "pauses in breathing during sleep", "excessive daytime sleepiness", "morning headache", "difficulty staying asleep"],
+            "responses": ["Your symptoms may be indicative of sleep apnea. Consultation with a sleep specialist for sleep studies and evaluation is crucial.", "Considering your symptoms, it's important to check for sleep apnea. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Hyperthyroidism",
+            "patterns": ["weight loss", "rapid heartbeat", "anxiety", "irritability", "excessive sweating"],
+            "responses": ["Your symptoms may be associated with hyperthyroidism. Consultation with an endocrinologist for thyroid function tests is recommended.", "Considering your symptoms, it's important to check thyroid function. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Chronic Obstructive Pulmonary Disease (COPD)",
+            "patterns": ["shortness of breath", "persistent cough", "wheezing", "chest tightness", "frequent respiratory infections"],
+            "responses": ["Your symptoms may be indicative of chronic obstructive pulmonary disease (COPD). Consultation with a pulmonologist for lung function tests and evaluation is crucial.", "Considering your symptoms, it's important to check for COPD. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Osteoarthritis",
+            "patterns": ["joint pain after activity", "stiffness in the joints", "swelling", "crepitus (grating or crunching sounds)", "reduced range of motion"],
+            "responses": ["Your symptoms may be indicative of osteoarthritis. Consultation with a rheumatologist for diagnosis and management is crucial.", "Considering your symptoms, it's important to check for osteoarthritis. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "Bulimia Nervosa",
+            "patterns": ["recurrent episodes of binge eating", "compensatory behaviors (vomiting, excessive exercise)", "fear of weight gain", "self-esteem overly influenced by body weight", "secretive eating"],
+            "responses": ["Your symptoms may indicate bulimia nervosa. Consultation with a mental health professional for assessment and support is recommended.", "Considering your symptoms, it's important to explore the possibility of bulimia nervosa with a mental health professional."]
+        },
+        {
+            "tag": "Sinus Infection",
+            "patterns": ["facial pain or pressure", "nasal congestion", "thick yellow or green nasal discharge", "headache", "loss of smell"],
+            "responses": ["Your symptoms may be indicative of a sinus infection. Consultation with an ear, nose, and throat (ENT) specialist for proper diagnosis and management is crucial.", "Considering your symptoms, it's important to check for a sinus infection. Consultation with a healthcare professional is advised."]
+        },
+        {
+            "tag": "not_found",
+            "patterns": [],
+            "responses": ["I'm sorry, I couldn't understand that. Can you please provide more information?", "It seems like I didn't catch that. Could you rephrase or provide more details?", "I'm still learning, and I may not have information on that. How about asking me about a health condition or symptom?"]
+        },
+        {
+            "tag": "thank_you",
+            "patterns": ["Thank you", "Thanks", "Appreciate it", "Thanks a lot", "Thank you so much"],
+            "responses": ["You're welcome!", "Glad I could help! If you have more questions, feel free to ask.", "You're welcome. If you need further assistance, don't hesitate to ask."]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Goodbye", "Bye", "See you later", "Farewell", "Take care", "So long"],
+            "responses": ["Goodbye! If you have more questions in the future, feel free to return.", "Bye! Take care of yourself.", "Farewell! If you ever need information, I'm here."]
+        }
+    ]
+}
